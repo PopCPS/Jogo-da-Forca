@@ -2,8 +2,19 @@
     display: none;
 }
 
+.app {
+    background-color: #C8D3D5;
+}
+
+.borda {
+    margin: 5vh 15vw;
+    border: 5px solid #464646;
+    border-radius: 100px;
+    background-color: #fdfdfd;
+}
+
 .cabecalho {
-    padding: 1%;
+    padding: 1% 3rem;
     display: flex;
     justify-content: space-between;
     font-size: 20px;
@@ -34,14 +45,18 @@
 }
 
 .conteudo {
-    background-color: #FCFAFA;
+    background-image: linear-gradient(0deg,#6E8387 , #C8D3D5) ;
 }
 
 .conteudo__forca {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5vw 0 3vw;
+    padding: 5vh 0 2vh;
+}
+
+.conteudo__forca__img {
+    height: 40vh;
 }
 
 .conteudo__forca__txt {
@@ -79,7 +94,7 @@
     display: flex;
     justify-content: center;
     column-gap: 1vw;
-    padding: 0 10% 3vw 10%;
+    padding: 0 10% 1vh 10%;
 }
 
 .conteudo__jogo__letras {
@@ -112,14 +127,15 @@
     width: 13vw;
     background-color: #FCFAFA;
     font-family: 'Mitr', sans-serif;
-    font-size: .8em;
-    height: 5vw;
+    font-size: 1.5em;
+    height: 100px;
 }
 
 .conteudo__menu__novaPalavra__botao {
     border-top-left-radius: 20vw;
     border-bottom-left-radius: 20vw;
     border-right: none;
+    padding: 0;
 }
 
 .conteudo__menu__input {
@@ -128,6 +144,8 @@
     border-left: none;
     border-color: #000000;
     text-align: center;
+    padding: 0;
+    height: calc(100px - 4px)
 }
 
 .conteudo__menu__novoJogo {
@@ -141,8 +159,13 @@
 }
 
 .rodape {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #6E8387;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    height: 5vh;
 }
 
 @media screen and (min-width: 0) {

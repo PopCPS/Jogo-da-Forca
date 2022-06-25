@@ -9,8 +9,10 @@ var letterCount;
 function newGame() {
     // Reset screen
     tries = 0;
+    acertos = 0;
     mistakes = [];
-    txt.classList.add('txt__hidden');
+    txtlose.classList.add('txt__hidden');
+    txtwin.classList.add('txt__hidden');
 
     random = Math.floor(Math.random() * list.length);
 

@@ -2,7 +2,8 @@ const body = document.querySelector('.app');
 
 const mistakesTextArea = document.querySelector('#mistakes');
 
-const txt = document.querySelector('.conteudo__forca__txt__perdeu');
+const txtlose = document.querySelector('.conteudo__forca__txt__perdeu');
+const txtwin = document.querySelector('.conteudo__forca__txt__ganhou')
 
 const novoJogo = document.querySelector('#newGame');
 const novaPalavra = document.querySelector('#addWord');
@@ -10,6 +11,8 @@ const novaPalavra = document.querySelector('#addWord');
 var foco;
 
 var tries = 0;
+
+var acertos;
 
 var mistakes = [];
 
@@ -21,19 +24,39 @@ body.addEventListener('keydown', function(event) {
 
     
     if(event.keyCode > 54 && event.keyCode < 91 && foco == false) {
+
         if(list[random].includes(key)) {
-            
+
             for(var i = 0; i < letterCount; i++) {
             
                 if(list[random].charAt(i) == key && tries < 6) {
                     
-                    var letter = document.querySelector('.letter' + i)
+                    var letter = document.querySelector('.letter' + i);
                     letter.value = key;
-                }              
+                    
+                    if(acertos !== letterCount) {
+                        acertos++;
+                    }
+                }
+                
+                var vitoria = document.querySelector('.letter' + i);
+
+                palavraVitoria = list[random].split('');
+                
+                console.log(vitoria.value);
+
+                if(acertos == letterCount) {
+                    txtwin.classList.remove('txt__hidden');
+                    return;
+                }
+
             }
         }else {
             var img;
             
+            if(acertos == letterCount) {
+                return;
+            }
 
             if(mistakes.indexOf(key) === -1) {
                 mistakes.push(key);
@@ -80,7 +103,7 @@ body.addEventListener('keydown', function(event) {
                 img.classList.add('img__hidden');
                 img = document.querySelector('#forca0');
                 img.classList.remove('img__hidden');
-                txt.classList.remove('txt__hidden');
+                txtlose.classList.remove('txt__hidden');
             }
         }
     }

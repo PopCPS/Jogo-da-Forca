@@ -1,24 +1,12 @@
 var input;
 
 function addNewWord() {
-    input = document.querySelector('#addWordInput').value;
-    console.log(input);
-    if(!input == '') {
-        list.push(input);
+    input = document.querySelector('.conteudo__menu__input');
+    console.log(input.value);
+    if(!input.value == '') {
+        list.push(input.value);
+        input.value= '';
     }else {
         return;
-    }
-}
-
-function validate() {
-    if (input == "") {
-        alert("Enter a name");
-        document.myForm.name.focus();
-        return false;
-    }
-    if (!/^[a-zA-Z]*$/g.test(input)) {
-        alert("Invalid characters");
-        document.myForm.name.focus();
-        return false;
     }
 }

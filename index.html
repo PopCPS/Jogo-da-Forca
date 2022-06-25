@@ -14,7 +14,6 @@
             <h1 class="cabecalho__titulo">JOGO DA FORCA</h1>  
             <nav>
                 <ul class="cabecalho__lista">
-                    <li class="cabecalho__lista__items">Menu</li>
                     <li class="cabecalho__lista__items">
                         <a class="cabecalho__lista__items__link" href="https://github.com/PopCPS" target="_blank">Github</a>
                     </li>
@@ -25,26 +24,28 @@
             </nav>
         </header>
         <main class="conteudo">
-            <div class="conteudo__forca"> 
-                <img id="forca6" class="img__hidden conteudo__forca__img" src="img/hangman 6.png">
-                <img id="forca5" class="img__hidden conteudo__forca__img" src="img/hangman 5.png">
-                <img id="forca4" class="img__hidden conteudo__forca__img" src="img/hangman 4.png">
-                <img id="forca3" class="img__hidden conteudo__forca__img" src="img/hangman 3.png">
-                <img id="forca2" class="img__hidden conteudo__forca__img" src="img/hangman 2.png">
-                <img id="forca1" class="conteudo__forca__img" src="img/hangman 1.png">
-                <img id="forca0" class="img__hidden conteudo__forca__img" src="img/hangman 0.png">
-                <div class="conteudo__forca__txt">
-                    <textarea class="txt__hidden conteudo__forca__txt__ganhou">Você ganhou</textarea>
-                    <textarea class="txt__hidden conteudo__forca__txt__perdeu">Você perdeu!</textarea>
-                    <textarea id="mistakes" class="conteudo__forca__txt__erros" readonly="true"></textarea>
-                </div>                    
-            </div>
-            <div id="container" class="conteudo__jogo">
-                <input class="letter0 conteudo__jogo__letras" placeholder="f">
-                <input class="letter1 conteudo__jogo__letras" placeholder="o">
-                <input class="letter2 conteudo__jogo__letras" placeholder="r">
-                <input class="letter3 conteudo__jogo__letras" placeholder="c">
-                <input class="letter4 conteudo__jogo__letras" placeholder="a">
+            <div class='borda'>
+                <div class="conteudo__forca"> 
+                    <img id="forca6" class="img__hidden conteudo__forca__img" src="img/hangman 6.png">
+                    <img id="forca5" class="img__hidden conteudo__forca__img" src="img/hangman 5.png">
+                    <img id="forca4" class="img__hidden conteudo__forca__img" src="img/hangman 4.png">
+                    <img id="forca3" class="img__hidden conteudo__forca__img" src="img/hangman 3.png">
+                    <img id="forca2" class="img__hidden conteudo__forca__img" src="img/hangman 2.png">
+                    <img id="forca1" class="conteudo__forca__img" src="img/hangman 1.png">
+                    <img id="forca0" class="img__hidden conteudo__forca__img" src="img/hangman 0.png">
+                    <div class="conteudo__forca__txt">
+                        <textarea class="txt__hidden conteudo__forca__txt__ganhou" readonly="true">Você ganhou</textarea>
+                        <textarea class="txt__hidden conteudo__forca__txt__perdeu" readonly="true">Você perdeu!</textarea>
+                        <textarea id="mistakes" class="conteudo__forca__txt__erros" readonly="true"></textarea>
+                    </div>                    
+                </div>
+                <div id="container" class="conteudo__jogo">
+                    <input class="letter0 conteudo__jogo__letras" placeholder="f">
+                    <input class="letter1 conteudo__jogo__letras" placeholder="o">
+                    <input class="letter2 conteudo__jogo__letras" placeholder="r">
+                    <input class="letter3 conteudo__jogo__letras" placeholder="c">
+                    <input class="letter4 conteudo__jogo__letras" placeholder="a">
+                </div>
             </div>
             <div class="conteudo__menu">
                 <div class="conteudo__menu__novaPalavra">                   
