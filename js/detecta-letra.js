@@ -1,24 +1,25 @@
 var body = document.querySelector('.app');
 
-var values = newGame();
-
-var letterCount = values[1];
 
 body.addEventListener('keydown', function(event) {
     const key = event.key;
 
-    if(list[values[0]].includes(key)) {
+    if(list[random].includes(key)) {
         
         for(var i = 0; i < letterCount; i++) {
           
-            if(list[values[0]].charAt(i) == key) {
+            if(list[random].charAt(i) == key) {
                 
                 var letter = document.querySelector('.letter' + i)
                 letter.value = key;
             }
 
-            console.log(list[values[0]].charAt(i));            
+            console.log(list[random].charAt(i));            
         }
+    }else{
+        
     }
+        
+    
 })
 

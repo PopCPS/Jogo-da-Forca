@@ -1,11 +1,15 @@
 // Word list 
-var list = ['giu', 'bebs', 'alura', 'caelum', 'curious', 'popiloto'];
+var list = ['giu', 'bebs', 'alura', 'caelum', 'curious', 'popiloto', 'breno loa'];
+
+var random;
+
+var letterCount;
 
 // Start new game
 function newGame() {
-    const random = Math.floor(Math.random() * list.length);
+    random = Math.floor(Math.random() * list.length);
 
-    var letterCount = list[random].replace(/\s+/g, '').length;
+    letterCount = list[random].replace(/\s+/g, '').length;
 
     // Clear inputs
     const container = document.getElementById('container');
@@ -23,6 +27,8 @@ function newGame() {
     console.log(random, list[random], letterCount);
     return [random, letterCount];
 }
+
+
 
 // Add new word to list
 function addNewWord() {
