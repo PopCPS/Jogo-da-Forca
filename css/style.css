@@ -1,3 +1,162 @@
-.img__hidden {
+.img__hidden, .txt__hidden {
     display: none;
+}
+
+.cabecalho {
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: #C8D3D5;
+}
+
+.cabecalho__titulo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.cabecalho__lista {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    color: #464646;
+    font-weight: 700;
+}
+
+.cabecalho__lista__items__link {
+    text-decoration: none;
+    color: #464646;
+}
+
+.cabecalho__lista__items {
+    margin-left: 2rem;
+}
+
+.conteudo {
+    background-color: #FCFAFA;
+}
+
+.conteudo__forca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 0 3vw;
+}
+
+.conteudo__forca__txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo__forca__txt__perdeu, .conteudo__forca__txt__ganhou {
+    font-family: 'Mitr', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    border: none;
+    resize: none;
+    height: 100px;
+    width: 30vw;
+    background-color: #FCFAFA;
+}
+
+.conteudo__forca__txt__erros {
+    height: 100px;
+    width: 30vw;
+    border: none;
+    resize: none;
+    font-family: 'Mitr', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    background-color: #FCFAFA;
+}
+
+.conteudo__jogo {
+    display: flex;
+    justify-content: center;
+    column-gap: 1vw;
+    padding: 0 10% 3vw 10%;
+}
+
+.conteudo__jogo__letras {
+    width: 5vw;
+    height: 4vw;
+    text-align: center;
+    border-radius: 10%;
+    border: .3vw solid #000000;
+    border-bottom: 1vw solid #000000;
+    font-family: 'Mitr', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #E8ECED;
+}
+
+.conteudo__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.conteudo__menu__novaPalavra {
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo__menu__novoJogo, .conteudo__menu__novaPalavra__botao, .conteudo__menu__input{
+    width: 13vw;
+    background-color: #FCFAFA;
+    font-family: 'Mitr', sans-serif;
+    font-size: .8em;
+    height: 5vw;
+}
+
+.conteudo__menu__novaPalavra__botao {
+    border-top-left-radius: 20vw;
+    border-bottom-left-radius: 20vw;
+    border-right: none;
+}
+
+.conteudo__menu__input {
+    border-top-right-radius: 20vw;
+    border-bottom-right-radius: 20vw;
+    border-left: none;
+    border-color: #000000;
+    text-align: center;
+}
+
+.conteudo__menu__novoJogo {
+    margin-right: 1vw;
+    border-radius: 20vw;
+}
+
+.conteudo__menu__novaPalavra__Info {
+    margin-top: 3vh;
+    height: 1em;
+}
+
+.rodape {
+    text-align: center;
+    background-color: #6E8387;
+}
+
+@media screen and (min-width: 0) {
+
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 992px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
 }

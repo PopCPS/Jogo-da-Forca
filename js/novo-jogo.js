@@ -7,7 +7,10 @@ var letterCount;
 
 // Start new game
 function newGame() {
+    // Reset screen
     tries = 0;
+    mistakes = [];
+    txt.classList.add('txt__hidden');
 
     random = Math.floor(Math.random() * list.length);
 
@@ -23,14 +26,15 @@ function newGame() {
         input.type = "text";
         input.maxLength = "1";  
         input.className = "letter" + inputAmount;
-        input.classList.add('letter');
+        input.classList.add('conteudo__jogo__letras');
         input.readOnly = true;
         container.appendChild(input);
     }
 
+    mistakesTextArea.value = ('');
     
     for(var i = 0; i < 7; i++) {
-        let img = document.querySelector('#hangman' + i);
+        let img = document.querySelector('#forca' + i);
         img.classList.remove('img__hidden');
         if(i == 6) {
             return;
@@ -38,17 +42,5 @@ function newGame() {
         img.classList.add('img__hidden');
     }
 
-
-    console.log(random, list[random], letterCount);
     return [random, letterCount];
 }
-
-
-
-// Add new word to list
-function addNewWord() {
-    let input = document.getElementById('addWord').value;
-    list.push(input);
-    console.log(input);
-}
-

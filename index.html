@@ -2,36 +2,65 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="app">
-        <header>
-
+        <header class="cabecalho">
+            <h1 class="cabecalho__titulo">JOGO DA FORCA</h1>  
+            <nav>
+                <ul class="cabecalho__lista">
+                    <li class="cabecalho__lista__items">Menu</li>
+                    <li class="cabecalho__lista__items">
+                        <a class="cabecalho__lista__items__link" href="https://github.com/PopCPS" target="_blank">Github</a>
+                    </li>
+                    <li class="cabecalho__lista__items">
+                        <a class="cabecalho__lista__items__link" href="https://www.linkedin.com/in/artur-coelho-194202225/" target="_blank">Linkedin</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <h1>Hangman</h1>  
-                <img id="hangman6" class="hangman" src="img/hangman 6.png">
-                <img id="hangman5" class="img__hidden hangman" src="img/hangman 5.png">
-                <img id="hangman4" class="img__hidden hangman" src="img/hangman 4.png">
-                <img id="hangman3" class="img__hidden hangman" src="img/hangman 3.png">
-                <img id="hangman2" class="img__hidden hangman" src="img/hangman 2.png">
-                <img id="hangman1" class="img__hidden hangman" src="img/hangman 1.png">
-                <img id="hangman0" class="img__hidden hangman" src="img/hangman 0.png">
-            <button id="firstGame" onclick="newGame()">New Game</button>
-            <button onclick="addNewWord()">Add a new word</button>
-            <input id="addWord">
-            <p>&#128712; New words added will disappear when refreshing page</p>
-            <div id="container">
-
+        <main class="conteudo">
+            <div class="conteudo__forca"> 
+                <img id="forca6" class="img__hidden conteudo__forca__img" src="img/hangman 6.png">
+                <img id="forca5" class="img__hidden conteudo__forca__img" src="img/hangman 5.png">
+                <img id="forca4" class="img__hidden conteudo__forca__img" src="img/hangman 4.png">
+                <img id="forca3" class="img__hidden conteudo__forca__img" src="img/hangman 3.png">
+                <img id="forca2" class="img__hidden conteudo__forca__img" src="img/hangman 2.png">
+                <img id="forca1" class="conteudo__forca__img" src="img/hangman 1.png">
+                <img id="forca0" class="img__hidden conteudo__forca__img" src="img/hangman 0.png">
+                <div class="conteudo__forca__txt">
+                    <textarea class="txt__hidden conteudo__forca__txt__ganhou">Você ganhou</textarea>
+                    <textarea class="txt__hidden conteudo__forca__txt__perdeu">Você perdeu!</textarea>
+                    <textarea id="mistakes" class="conteudo__forca__txt__erros" readonly="true"></textarea>
+                </div>                    
             </div>
-            
+            <div id="container" class="conteudo__jogo">
+                <input class="letter0 conteudo__jogo__letras" placeholder="f">
+                <input class="letter1 conteudo__jogo__letras" placeholder="o">
+                <input class="letter2 conteudo__jogo__letras" placeholder="r">
+                <input class="letter3 conteudo__jogo__letras" placeholder="c">
+                <input class="letter4 conteudo__jogo__letras" placeholder="a">
+            </div>
+            <div class="conteudo__menu">
+                <div class="conteudo__menu__novaPalavra">                   
+                    <button id="firstGame" class="conteudo__menu__novoJogo" onclick="newGame()">Novo Jogo</button>
+                    <button id="addWord" class="conteudo__menu__novaPalavra__botao" onclick="addNewWord()">Adicione uma palavra</button>
+                    <input id="addWordInput" class="conteudo__menu__input" placeholder="'palavra'">                    
+                </div>
+                <p class="conteudo__menu__novaPalavra__Info">&#128712; Palavras adicionadas seram perdidas ao recarregar</p>
+            </div>
         </main>
-        <footer>
-
+        <footer class="rodape">
+            <p class="rodape__txt">Feito por Artur Coelho</p>
         </footer>
     </body>
     <script src="js/novo-jogo.js"></script>
     <script src="js/detecta-letra.js"></script>
+    <script src="js/adiciona-palavra.js"></script>
 </html>
 
