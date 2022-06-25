@@ -3,7 +3,7 @@ var body = document.querySelector('.app');
 var tries = 0;
 
 body.addEventListener('keydown', function(event) {
-    const key = event.key;
+    var key = event.key;
 
     if(list[random].includes(key)) {
         
@@ -13,12 +13,15 @@ body.addEventListener('keydown', function(event) {
                 
                 var letter = document.querySelector('.letter' + i)
                 letter.value = key;
+                console.log(tries);
             }              
         }
     }else {
         var img;
         
         tries++;
+
+        console.log(tries + 'tries');
 
         if(tries == 1) {
             img = document.querySelector('#hangman6');
@@ -50,8 +53,7 @@ body.addEventListener('keydown', function(event) {
             img.classList.add('img__hidden');
             img = document.querySelector('#hangman0');
             img.classList.remove('img__hidden');
-
-            document.querySelectorAll('.letter').readOnly = true;
+            img.classList.remove('letter');
             
         }
     }
