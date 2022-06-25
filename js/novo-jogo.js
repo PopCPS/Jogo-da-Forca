@@ -17,10 +17,11 @@ function newGame() {
 
     // Create inputs
     for(var inputAmount = 0; inputAmount < letterCount; inputAmount++) {
-        var input = document.createElement("input");
+        let input = document.createElement("input");
         input.type = "text";
         input.maxLength = "1";  
         input.className = "letter" + inputAmount;
+        input.classList.add('letter');
         container.appendChild(input);
     }
 
