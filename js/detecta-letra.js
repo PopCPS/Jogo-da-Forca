@@ -29,7 +29,7 @@ body.addEventListener('keydown', function(event) {
 
             for(var i = 0; i < letterCount; i++) {
             
-                if(list[random].charAt(i) == key && tries < 6) {
+                if(list[random].charAt(i) == (key || keyboardKey) && tries < 6) {
                     
                     var letter = document.querySelector('.letter' + i);
                     letter.value = key;
@@ -42,8 +42,6 @@ body.addEventListener('keydown', function(event) {
                 var vitoria = document.querySelector('.letter' + i);
 
                 palavraVitoria = list[random].split('');
-                
-                console.log(vitoria.value);
 
                 if(acertos == letterCount) {
                     txtwin.classList.remove('txt__hidden');
@@ -104,6 +102,7 @@ body.addEventListener('keydown', function(event) {
                 img = document.querySelector('#forca0');
                 img.classList.remove('img__hidden');
                 txtlose.classList.remove('txt__hidden');
+                alert(list[random]);
             }
         }
     }

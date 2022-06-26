@@ -77,6 +77,10 @@
     background-color: #FCFAFA;
 }
 
+.conteudo__forca__txt__perdeu:focus, .conteudo__forca__txt__ganhou:focus {
+    outline: none;
+}
+
 .conteudo__forca__txt__erros {
     height: 100px;
     width: 30vw;
@@ -88,6 +92,10 @@
     color: #000000;
     text-align: center;
     background-color: #FCFAFA;
+}
+
+.conteudo__forca__txt__erros:focus {
+    outline: none;
 }
 
 .conteudo__jogo {
