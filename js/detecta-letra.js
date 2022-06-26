@@ -20,8 +20,7 @@ body.addEventListener('keydown', function(event) {
 
     foco = document.querySelector('#addWordInput') === document.activeElement;
     
-    var key = event.key;
-
+    key = event.key;
     
     if(event.keyCode > 54 && event.keyCode < 91 && foco == false) {
 

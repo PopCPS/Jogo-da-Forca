@@ -7,17 +7,17 @@
 }
 
 .borda {
-    margin: 5vh 15vw;
+    /* margin: 5vh 15vw; */
     border: 5px solid #464646;
-    border-radius: 100px;
+    /* border-radius: 100px; */
     background-color: #fdfdfd;
 }
 
 .cabecalho {
-    padding: 1% 3rem;
+    /* padding: 1% 3rem; */
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
+    /* font-size: 20px; */
     background-color: #C8D3D5;
 }
 
@@ -40,9 +40,9 @@
     color: #464646;
 }
 
-.cabecalho__lista__items {
+/* .cabecalho__lista__items {
     margin-left: 2rem;
-}
+} */
 
 .conteudo {
     background-image: linear-gradient(0deg,#6E8387 , #C8D3D5) ;
@@ -55,9 +55,9 @@
     padding: 5vh 0 2vh;
 }
 
-.conteudo__forca__img {
+/* .conteudo__forca__img {
     height: 40vh;
-}
+} */
 
 .conteudo__forca__txt {
     display: flex;
@@ -66,13 +66,13 @@
 
 .conteudo__forca__txt__perdeu, .conteudo__forca__txt__ganhou {
     font-family: 'Mitr', sans-serif;
-    font-size: 3em;
+    /* font-size: 3em; */
     text-transform: uppercase;
     color: #000000;
     text-align: center;
     border: none;
     resize: none;
-    height: 100px;
+    /* height: 100px; */
     width: 30vw;
     background-color: #FCFAFA;
 }
@@ -106,14 +106,14 @@
 }
 
 .conteudo__jogo__letras {
-    width: 5vw;
-    height: 4vw;
+    /* width: 5vw;
+    height: 4vw; */
     text-align: center;
     border-radius: 10%;
     border: .3vw solid #000000;
     border-bottom: 1vw solid #000000;
     font-family: 'Mitr', sans-serif;
-    font-size: 3em;
+    /* font-size: 3em; */
     text-transform: uppercase;
     color: #000000;
     background-color: #E8ECED;
@@ -132,11 +132,11 @@
 }
 
 .conteudo__menu__novoJogo, .conteudo__menu__novaPalavra__botao, .conteudo__menu__input{
-    width: 13vw;
+    /* width: 13vw; */
     background-color: #FCFAFA;
     font-family: 'Mitr', sans-serif;
-    font-size: 1.5em;
-    height: 100px;
+    /* font-size: 1.5em; */
+    /* height: 100px; */
 }
 
 .conteudo__menu__novaPalavra__botao {
@@ -153,7 +153,7 @@
     border-color: #000000;
     text-align: center;
     padding: 0;
-    height: calc(100px - 4px)
+    /* height: calc(100px - 4px) */
 }
 
 .conteudo__menu__novoJogo {
@@ -162,8 +162,12 @@
 }
 
 .conteudo__menu__novaPalavra__Info {
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     height: 1em;
+}
+
+.conteudo__teclado {
+    display: none;
 }
 
 .rodape {
@@ -173,21 +177,138 @@
     background-color: #6E8387;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    height: 5vh;
+    /* height: 5vh; */
 }
-
 @media screen and (min-width: 0) {
+    .conteudo__teclado {
+        display: initial;
+    }
 
+    .conteudo {
+        height: 85vh;
+    }
+
+    .rodape {
+        height: 6vh;
+    }
+
+    .borda {
+        margin: 1vh 2.5vw 3vh;
+        width: 90vw;
+        border-radius: 5vw;
+    }
+
+    .conteudo__forca__img {
+        height: 30vh;
+        width: auto;
+    }
+
+    .conteudo__menu__novoJogo, .conteudo__menu__novaPalavra__botao, .conteudo__menu__input {
+        width: 30%;
+        font-size: 12px;
+        height: 10vh;
+        border-color: #000000;
+    }
+
+    .conteudo__menu__input {
+        height: calc(10vh - 4px);
+    }
+
+    .cabecalho__lista__items {
+        margin-left: 1rem;
+    }
+
+    .cabecalho {
+        font-size: 16px;
+        padding: 4vh 1rem 1vh;
+        height: 3vh;
+    }
+
+    .conteudo__menu__novaPalavra__Info {
+        text-align: center;
+        margin-top: 1vh;
+    }
+
+    .conteudo__jogo__letras {
+        width: 10vw;
+        height: 8vw;
+        font-size: 2.5rem;
+    }
+
+    .conteudo__teclado__linha1, .conteudo__teclado__linha2, .conteudo__teclado__linha3 {
+        display: flex;
+        justify-content: center;
+        column-gap: .9vw;
+        row-gap: .9vw;
+    }
+
+    .conteudo__teclado__tecla {
+        height: 9vw;
+        width: 9vw;
+        text-align: center;
+        border-radius: 10%;
+        border: .3vw solid #000000;
+        border-bottom: 1vw solid #000000;
+        font-family: 'Mitr', sans-serif;
+        font-size: 1em;
+        text-transform: uppercase;
+        color: #000000;
+        background-color: #E8ECED;
+    }
+
+    .conteudo__forca__txt__ganhou, .conteudo__forca__txt__perdeu, .conteudo__forca__txt__erros {
+        font-size: 1.2rem;
+        height: 80px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    
+    .conteudo__jogo__letras {
+        height: 4vw;
+        width: 5vw;
+    }
+
+    .conteudo__menu {
+        padding: 0;
+    }
+
+    .conteudo__teclado__tecla {
+        width: 7vw;
+        height: 7vh;
+    }
+
+    .conteudo__teclado__linha1, .conteudo__teclado__linha2, .conteudo__teclado__linha3 {
+        margin-bottom: 3px;
+    }
+
+    .conteudo__forca__txt__ganhou, .conteudo__forca__txt__perdeu, .conteudo__forca__txt__erros {
+        font-size: 2rem;
+    }
+
+    .cabecalho__titulo, .cabecalho__lista__items__link {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 992px) {
-    
-}
+    .conteudo__teclado {
+        display: none;
+    }
 
-@media screen and (min-width: 1200px) {
-    
+    .conteudo__forca__img {
+        height: 45vh;
+    }
+
+    .borda   {
+        width: 70vw;
+        margin: 3vh 15vw;
+    }
+
+    .conteudo {
+        height: 82vh;
+    }
+
+    .cabecalho {
+        padding: 4vh 3rem 2vh;
+    }
 }
